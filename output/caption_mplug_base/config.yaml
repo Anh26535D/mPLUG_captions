@@ -1,0 +1,28 @@
+add_object: false
+alpha: 0.4
+batch_size_test: 64
+batch_size_train: 64
+beam_size: 5
+bert_config: configs/config_bert_stride3.json
+bos: '[CLS]'
+clip_name: ViT-B-16
+coco_root: img_root/coco_2014/
+distill: true
+eos: '[SEP]'
+image_res: 384
+k_test: 128
+max_length: 10
+min_length: 1
+optimizer: {lr1: 1e-05, lr2: 5e-06, opt: adamW, weight_decay: 0.02}
+prompt: ''
+read_local_data: true
+schedular: {cooldown_epochs: 0, decay_rate: 1, epochs: 5, lr: 1e-05, min_lr: 1e-06,
+  sched: cosine, warmup_epochs: 4, warmup_lr: 1e-05}
+test_file: [data/coco_object/annotations/captions_val2014.json]
+text_decoder: bert-base-uncased
+text_encoder: bert-base-uncased
+train_file: [data/coco_object/annotations/captions_val2014.json]
+use_checkpoint: true
+val_file: [data/coco_object/annotations/captions_val2014.json]
+vision_width: 768
+warm_up: true

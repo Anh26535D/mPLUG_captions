@@ -1,0 +1,12 @@
+torch==1.11.0
+transformers==4.14.1
+timm==0.4.9
+tensorflow==2.15.0
+decord
+ftfy
+opencv-python
+more_itertools
+colorlog==6.8.2
+ruamel.yaml==0.18.5
+pycocotools==2.0.7
+# git+git://github.com/j-min/language-evaluation@master
