@@ -189,17 +189,7 @@ Comming soon.
 
 [Download json files of downstream tasks](https://alice-open.oss-cn-zhangjiakou.aliyuncs.com/mPLUG/data.tar)
 
-### Visual Question Answering
-
-1. Download VQA v2 dataset and Visual Genome dataset from the original websites [VQA 2.0](https://eval.ai/web/challenges/challenge-page/830/leaderboard/2278).
-2. Download and extract the provided dataset json files.
-3. In configs/vqa_mplug_base.yaml, set the paths for the json files and the image paths.
-4. Finetune the pre-trained mplug_base or large model using 8 A100 GPUs:
-<pre>sh scripts/vqa_mplug_base.sh</pre> 
-<pre>sh scripts/vqa_mplug_large.sh</pre>                                             
-5. Evaluate the result using the official evaluation server.
-       
-                                                                                          
+                                                                           
 ### Image Captioning
      
                                                                                           
@@ -210,41 +200,6 @@ Comming soon.
 5. Finetune the pre-trained mplug_base or large model using 8 A100 GPUs:
 <pre>sh scripts/caption_mplug_base.sh</pre> 
 <pre>sh scripts/caption_mplug_large.sh</pre>  
-
-                                                                                          
-### Image-text Retrieval
-1. Download MSCOCO or Flickr30k datasets from the original websites.
-2. Download and extract the provided dataset json files.
-3. In configs/retrieval_flickr30k_mplug_large.yaml or configs/retrieval_coco_mplug_large.yaml, set the paths for the json files and the image path.
-4. Finetune the pre-trained checkpoint using 8 A100 GPUs:
-<pre>sh scripts/retrieval_flickr30k_mplug_large.sh</pre> 
-<pre>sh scripts/retrieval_coco_mplug_large.sh</pre>
-
-### Visual Grounding
-1. Download RefCOCO datasets from the original websites.
-2. Download and extract the provided dataset json files.
-3. In configs/grounding_mplug_large.yaml, set the paths for the json files and the image path. Data preparation can follow [TransVG](https://github.com/djiajunustc/TransVG)
-4. Finetune the pre-trained checkpoint using 8 A100 GPUs:
-<pre> sh scripts/grounding_mplug_base.sh </pre>
-
-### Zero-shot Video-text Retrieval
-1. Download MSRVTT datasets from the original websites.
-2. In configs/retrieval_msrvtt_mplug_large.yaml, set the paths for the json files and the video paths.
-3. To perform zero-shot evaluation, run：
-<pre>sh scripts/retrieval_msrvtt_mplug_large.sh</pre> 
-
-### Zero-shot Video Question Answering
-1. Download MSRVTT-QA datasets from the original websites.
-2. In configs/videoqa_msrvtt_mplug_base.yaml, set the paths for the json files and the video paths.
-3. To perform zero-shot evaluation, run：
-<pre>sh scripts/videoqa_msrvtt_mplug_base.sh</pre> 
-
-### Zero-shot Video Captioning
-1. Download VATEX datasets from the original websites.
-2. In configs/videocap_vatex_mplug_large.yaml, set the paths for the json files and the video paths.
-3. To perform zero-shot evaluation, run：
-<pre>sh scripts/videocap_vatex_mplug_large.sh</pre> 
-
 
 
 ## Citation
